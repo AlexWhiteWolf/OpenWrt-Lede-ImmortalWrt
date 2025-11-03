@@ -5,9 +5,9 @@ on:
   workflow_dispatch:
     inputs:
       device:
-        description: '请输入设备型号,比如: ax6s wr30u-stock x86_64_DEVICE_generic'
+        description: 'an7581-evb'
         required: true
-        default: 'ax6s'
+        default: 'an7581-evb'
 
 jobs:
   build:
