@@ -5,9 +5,9 @@ on:
   workflow_dispatch:
     inputs:
       device:
-        description: '请输入设备型号,比如: ax6s wr30u-stock x86_64_DEVICE_generic'
+        description: 'bell,xg-040g-md'
         required: true
-        default: 'ax6s'
+        default: 'bell,xg-040g-md'
 
 jobs:
   build:
@@ -26,7 +26,7 @@ jobs:
 
     - name: Clone source code
       run: |
-        git clone https://github.com/openwrt/openwrt.git && cp -r files openwrt && chmod 755 -R openwrt/files && cat feeds.buildinfo >>openwrt/feeds.conf.default
+        git clone https://github.com/AlexWhiteWolf/openwrt.git && cp -r files openwrt && chmod 755 -R openwrt/files && cat feeds.buildinfo >>openwrt/feeds.conf.default
         cat openwrt/feeds.conf.default
 
     - name: Update feeds
